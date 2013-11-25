@@ -56,4 +56,11 @@ public class DadosNotaf implements InterfaceNotaFiscal{
          stmt.executeUpdate();
  banco.desconectar();
     }
+    private int gerarCod() throws SQLException, ClassNotFoundException{
+        int codigo = 0;
+        stmt = banco.conectar().prepareStatement("SELECT codnf FROM nf");
+        ResultSet result = stmt.executeQuery();
+        
+        return codigo;
+    }
 }
