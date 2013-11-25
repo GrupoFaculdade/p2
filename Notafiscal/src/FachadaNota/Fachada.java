@@ -53,6 +53,7 @@ public class Fachada implements InterfaceIntensNota,InterfaceNotaFiscal,Interfac
     @Override
     public ArrayList<ItensNota> listarIntNota(ItensNota listaIntN) throws ClassNotFoundException, SQLException, Exception {
         
+        
     }
 
     @Override
