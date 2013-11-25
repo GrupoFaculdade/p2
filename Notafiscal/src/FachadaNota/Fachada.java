@@ -52,43 +52,42 @@ public class Fachada implements InterfaceIntensNota,InterfaceNotaFiscal,Interfac
 
     @Override
     public ArrayList<ItensNota> listarIntNota(ItensNota listaIntN) throws ClassNotFoundException, SQLException, Exception {
-        
-        
+        return itensN.listarIntNota(listaIntN);
     }
 
     @Override
     public void listaNotaFiscal(int codNotaFiscal) throws ClassNotFoundException, SQLException, NotaFiscalException {
-        
+        nota.listaNotaFiscal(codNotaFiscal);
     }
 
     @Override
     public void RemoverNotaFiscal(int codNotaFiscal) throws ClassNotFoundException, SQLException, NotaFiscalException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+nota.RemoverNotaFiscal(codNotaFiscal);
+        }
 
     @Override
     public void alterNotaFiscal(int NotaFiscal, Notaf notaf) throws ClassNotFoundException, SQLException, NotaFiscalException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        nota.alterNotaFiscal(NotaFiscal, notaf);
     }
 
     @Override
     public void cadastrarProd(Produto prod) throws ClassNotFoundException, SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.prod.cadastrarProd(prod);
     }
 
     @Override
     public void alterarProd(int p, Produto prod) throws ClassNotFoundException, SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        alterarProd(p, prod);
     }
 
     @Override
     public void removerProd(int prod) throws ClassNotFoundException, SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.prod.removerProd(prod);
     }
 
     @Override
     public ArrayList<Produto> listarProd(String listProd) throws ClassNotFoundException, SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.prod.listarProd(listProd);
     }
 
     
